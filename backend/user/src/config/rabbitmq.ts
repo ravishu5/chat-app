@@ -3,6 +3,7 @@ import amqp from 'amqplib'
 let channel: amqp.Channel
 
 export const connectRabbitMQ = async() => {
+    // connection -> channel => queue assert => publish/consume
     try {
         const connection = await amqp.connect({
             protocol: "amqp",

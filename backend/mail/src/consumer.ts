@@ -5,6 +5,7 @@ import dotenv from 'dotenv'
 dotenv.config();
 
 export const startSendOtpConsumer = async() =>{
+    // connection -> channel => queue assert => publish/consume
     try {
         const connection = await amqp.connect({
             protocol: "amqp",
